@@ -13,7 +13,7 @@
   <p state="twicecount" goto="/e.html"></p>
   <script>
     const [getCount, setCount] = useState(0, "count")
-    const [getTwiceCount, setTwiceCount] = useState(69, "twicecount")
+    const [getTwiceCount, setTwiceCount] = useState(2, "twicecount")
     useCallback("count", (value) =>{ setTwiceCount(2*value) })  
   </script>
 </body>
