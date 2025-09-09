@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StateLi</title>
+  <script src="./stateli.js"></script>
+  <script src="./attributes.js"></script>
+</head>
+<body>
+  <button onclick="setCount(getCount()+1)" state="count"></button>
+  <button onclick="setCount(getCount()+1)" state="count"></button>
+  <p state="twicecount" goto="/e.html"></p>
+  <script>
+    const [getCount, setCount] = useState(0, "count")
+    const [getTwiceCount, setTwiceCount] = useState(69, "twicecount")
+    useCallback("count", (value) =>{ setTwiceCount(2*value) })  
+  </script>
+</body>
+</html>
